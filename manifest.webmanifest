@@ -1,8 +1,0 @@
-{
-    "name": "Budget Tracking App",
-    "short_name": "Budget-App",
-    "theme_color": "#888888",
-    "background_color": "#888888",
-    "start_url": "/",
-    "display": "standalone"
-  }

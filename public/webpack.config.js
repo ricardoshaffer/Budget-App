@@ -3,13 +3,13 @@ const path = require("path");
 
 const config = {
   entry: {
-    app: "index.js"
+    app: "./index.js"
   },
   output: {
     path: __dirname + "/dist",
     filename: "[name].bundle.js"
   },
-  mode: "production",
+  mode: "dev",
   module: {
     rules: [
       {
