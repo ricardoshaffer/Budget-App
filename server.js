@@ -16,11 +16,11 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(require("./routes/api.js"));
 // added localhost/budget for mongoose connect for offline rendering
-mongoose.connect("mongodb://localhost/budget" || "mongodb://localhost/budget", {
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useFindAndModify: false
 });
-mongoose.connect(MONGODB_URI);
 // routes
 
 app.listen(PORT, () => {
