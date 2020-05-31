@@ -22,7 +22,7 @@ mongoose.connect("mongodb://localhost/budget" || "mongodb://localhost/budget", {
 
 // routes
 app.use(require("./routes/api.js"));
-
+mongoose.connect(MONGODB_URI);
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
