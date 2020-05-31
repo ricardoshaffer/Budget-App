@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
-
+// added localhost/budget for mongoose connect for offline rendering
 mongoose.connect("mongodb://localhost/budget" || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useFindAndModify: false
