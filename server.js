@@ -14,15 +14,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
+app.use(require("./routes/api.js"));
 // added localhost/budget for mongoose connect for offline rendering
 mongoose.connect("mongodb://localhost/budget" || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
-
-// routes
-app.use(require("./routes/api.js"));
 mongoose.connect(MONGODB_URI);
+// routes
+
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
